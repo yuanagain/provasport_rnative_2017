@@ -8,7 +8,11 @@ import MatchPage from './pages/MatchPage.js'
 export default class App extends React.Component {
   render() {
     return (
-      <MatchPage />
+      <View style={styles.container}>
+        <View style={styles.dialogue}>
+          <MatchPage />
+        </View>
+      </View>
     );
   }
 }
@@ -16,8 +20,15 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(255,255,255,0.4)',
-    alignItems: 'center',
+    paddingVertical: 40,
+    paddingHorizontal: 20,
+    backgroundColor: 'grey',
+
+    alignItems: 'stretch',
     justifyContent: 'center',
   },
+  dialogue: {
+    borderRadius: 10,
+    flex: 1
+  }
 });
